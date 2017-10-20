@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ButtonBar?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane fx:id="mainWindow" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Library.Login.mainWindowController">
+   <top>
+      <VBox prefHeight="181.0" prefWidth="609.0" BorderPane.alignment="CENTER">
+         <children>
+            <MenuBar>
+              <menus>
+                <Menu mnemonicParsing="false" text="File">
+                  <items>
+                    <MenuItem mnemonicParsing="false" text="Close" />
+                  </items>
+                </Menu>
+                <Menu mnemonicParsing="false" text="Edit">
+                  <items>
+                    <MenuItem mnemonicParsing="false" text="Delete" />
+                  </items>
+                </Menu>
+                <Menu mnemonicParsing="false" text="Help">
+                  <items>
+                    <MenuItem mnemonicParsing="false" text="About" />
+                  </items>
+                </Menu>
+              </menus>
+            </MenuBar>
+            <AnchorPane>
+               <children>
+                  <Pane prefHeight="155.0" prefWidth="609.0" style="-fx-background-color: #009999;">
+                     <children>
+                        <AnchorPane layoutX="205.0" layoutY="108.0">
+                           <children>
+                              <VBox layoutX="-32.0" layoutY="14.0" />
+                           </children>
+                        </AnchorPane>
+                        <Label layoutX="205.0" layoutY="7.0" style="-fx-text-fill: #fff;" text="Admin Panel">
+                           <font>
+                              <Font name="HP Simplified" size="37.0" />
+                           </font>
+                        </Label>
+                        <AnchorPane layoutX="153.0" layoutY="75.0" prefHeight="102.0" prefWidth="294.0">
+                           <children>
+                              <Pane fx:id="accountManagerPanel" prefHeight="81.0" prefWidth="294.0" style="-fx-background-color: F0F0F0;">
+                                 <children>
+                                    <Label layoutX="83.0" layoutY="14.0" text="Account Manager">
+                                       <font>
+                                          <Font name="HP Simplified" size="18.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                              </Pane>
+                           </children>
+                        </AnchorPane>
+                        <ImageView fx:id="userPictureImageView" fitHeight="79.0" fitWidth="79.0" layoutX="8.0" layoutY="7.0" pickOnBounds="true" preserveRatio="true" />
+                        <Label fx:id="welcomeLabel" layoutX="87.0" layoutY="19.0" prefHeight="20.0" prefWidth="90.0"/>
+                     </children>
+                  </Pane>
+               </children>
+            </AnchorPane>
+         </children>
+      </VBox>
+   </top>
+   <center>
+      <AnchorPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+         <children>
+            <Pane layoutX="110.0" prefHeight="96.0" prefWidth="380.0">
+               <children>
+                  <ButtonBar layoutX="68.0" prefHeight="53.0" prefWidth="199.0">
+                    <buttons>
+                      <Button fx:id="usersButton" mnemonicParsing="false" onAction="#openUserWindow" prefHeight="36.0" prefWidth="92.0" text="Users" />
+                        <Button fx:id="addUsersButton" layoutX="118.0" layoutY="12.0" mnemonicParsing="false" onAction="#openAddUsersWindow" prefHeight="36.0" prefWidth="92.0" text="Add User" />
+                    </buttons>
+                  </ButtonBar>
+               </children>
+            </Pane>
+         </children>
+      </AnchorPane>
+   </center>
+   <bottom>
+      <AnchorPane prefHeight="200.0" prefWidth="600.0" BorderPane.alignment="CENTER">
+         <children>
+            <Label layoutX="268.0" text="Books">
+               <font>
+                  <Font name="HP Simplified" size="25.0" />
+               </font>
+            </Label>
+            <Pane layoutX="119.0" layoutY="39.0" prefHeight="123.0" prefWidth="426.0">
+               <children>
+                  <Button fx:id="addBooksButton" layoutX="14.0" layoutY="14.0" mnemonicParsing="false" onAction="#openAddBooksWindow" prefHeight="38.0" prefWidth="91.0" text="Add Books" />
+                  <Button fx:id="manageBooksButton" layoutX="122.0" layoutY="14.0" mnemonicParsing="false" onAction="#openManageBooksWindow" prefHeight="38.0" prefWidth="113.0" text="Mange Books" />
+                  <Button fx:id="checkoutBooksButton" layoutX="258.0" layoutY="14.0" mnemonicParsing="false" onAction="#openCheckoutBooksWindow" prefHeight="38.0" prefWidth="112.0" text="Checkout Books" />
+               </children>
+            </Pane>
+         </children>
+      </AnchorPane>
+   </bottom>
+</BorderPane>
